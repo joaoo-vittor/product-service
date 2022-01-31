@@ -7,5 +7,7 @@ const { address } = os.networkInterfaces().eth0[0];
 const port = Number(process.env.PORT) || 3001;
 
 app.listen(port, configApp.host, () => {
+  console.log('\n###### Node.js Service ######\n');
   console.log(`\nCTRL + Click em http://${address}:${port}\n`);
+  console.log('\n#############################\n');
 });
